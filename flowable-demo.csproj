@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="IKVM" Version="8.2.1" />
+    <PackageReference Include="IKVM.Maven.Sdk" Version="1.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <MavenReference Include="org.flowable:flowable-engine">
+      <groupId>org.flowable</groupId>
+      <artifactId>flowable-engine</artifactId>
+      <version>6.7.2</version>
+    </MavenReference>
+    <MavenReference Include="com.h2database:h2">
+      <groupId>com.h2database</groupId>
+      <artifactId>h2</artifactId>
+      <version>1.4.200</version>
+    </MavenReference>
+  </ItemGroup>
+
+</Project>
