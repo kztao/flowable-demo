@@ -40,6 +40,11 @@
       <artifactId>h2</artifactId>
       <version>1.4.200</version>
     </MavenReference>
+    <MavenReference Include="org.springframework:spring-webflux">
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-webflux</artifactId>
+      <version>5.3.23</version>
+    </MavenReference>
   </ItemGroup>
 
 </Project>

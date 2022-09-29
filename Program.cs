@@ -1,15 +1,15 @@
 
-using java.lang;
-
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
+var logger = org.slf4j.LoggerFactory.getLogger(typeof(Program).Name);
 org.apache.http.impl.client.HttpClientBuilder httpBuilder;
 org.flowable.http.common.impl.HttpClientConfig httpConfig;
+//org.springframework.web.reactive.function.client.WebClient webClient;
 
-var cfg = new org.flowable.engine.impl.cfg
+var cfg = new org.flowable.engine.impl.cfg.StandaloneProcessEngineConfiguration()
       .setJdbcUrl("jdbc:h2:mem:flowable;DB_CLOSE_DELAY=-1")
       .setJdbcUsername("sa")
       .setJdbcPassword("")
