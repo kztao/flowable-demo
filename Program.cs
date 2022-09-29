@@ -1,12 +1,15 @@
+
+using java.lang;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-//if commit this line , got error: "Unhandled exception. java.lang.NoClassDefFoundError: org/slf4j/LoggerFactory"
-var logger = org.slf4j.LoggerFactory.getLogger(typeof(Program).Name);
+org.apache.http.impl.client.HttpClientBuilder httpBuilder;
+org.flowable.http.common.impl.HttpClientConfig httpConfig;
 
-var cfg = new org.flowable.engine.impl.cfg.StandaloneProcessEngineConfiguration()
+var cfg = new org.flowable.engine.impl.cfg
       .setJdbcUrl("jdbc:h2:mem:flowable;DB_CLOSE_DELAY=-1")
       .setJdbcUsername("sa")
       .setJdbcPassword("")

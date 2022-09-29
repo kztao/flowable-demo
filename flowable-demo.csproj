@@ -4,6 +4,9 @@
     <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+
+    <MavenDefaultRepositories>central=https://maven.aliyun.com/repository/central</MavenDefaultRepositories>
+    <MavenAdditionalRepositories>public=https://maven.aliyun.com/repository/public</MavenAdditionalRepositories>
   </PropertyGroup>
 
   <ItemGroup>
@@ -12,9 +15,24 @@
   </ItemGroup>
 
   <ItemGroup>
+    <MavenReference Include="commons-logging:commons-logging">
+      <groupId>commons-logging</groupId>
+      <artifactId>commons-logging</artifactId>
+      <Version>1.2</Version>
+    </MavenReference>
     <MavenReference Include="org.flowable:flowable-engine">
       <groupId>org.flowable</groupId>
       <artifactId>flowable-engine</artifactId>
+      <version>6.7.2</version>
+    </MavenReference>
+    <MavenReference Include="org.flowable:flowable-http">
+      <groupId>org.flowable</groupId>
+      <artifactId>flowable-http</artifactId>
+      <version>6.7.2</version>
+    </MavenReference>
+    <MavenReference Include="org.flowable:flowable-http-common">
+      <groupId>org.flowable</groupId>
+      <artifactId>flowable-http-common</artifactId>
       <version>6.7.2</version>
     </MavenReference>
     <MavenReference Include="com.h2database:h2">
